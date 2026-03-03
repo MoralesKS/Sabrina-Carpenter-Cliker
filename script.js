@@ -1,6 +1,7 @@
 var foto = document.body.querySelector("img")
 foto.addEventListener('click', Clicar)
 
+var audio = document.body.querySelector('audio')
 
 var b1 = document.body.querySelector('button#um')
 b1.addEventListener('click', Button1)
@@ -15,7 +16,7 @@ var b4 = document.body.querySelector('button#quatro')
 b4.addEventListener('click', Button4)
 
 var b5 = document.body.querySelector('button#cinco')
-b5.addEventListener('click', Button4)
+b5.addEventListener('click', Button5)
 
 var pontos = 0
 var c = 1
@@ -34,7 +35,9 @@ function Button1(){
         pontos = pontos - 10
         c = c + 5
         p.innerHTML = `${pontos} pontos!!`
-        foto.src = "Espresso.jpg"
+        foto.src = "assets/Espresso.jpg"
+        audio.src = "audios/Espresso.mp3"
+        audio.play()
         txt.innerHTML = "Tocando agora: Espresso!"
     }
 }
@@ -46,7 +49,9 @@ function Button2(){
         pontos = pontos - 50
         c = c + 10
         p.innerHTML = `${pontos} pontos!!`
-        foto.src = "Manchild.jpg"
+        foto.src = "assets/Manchild.jpg"
+        audio.src = "audios/Manchild.mp3"
+        audio.play()
         txt.innerHTML = "Tocando agora: Manchild!"
     }
 }
@@ -57,7 +62,9 @@ function Button3(){
     } else {
         pontos = pontos - 100
         p.innerHTML = `${pontos} pontos!!`
-        foto.src = "Please.jpg"
+        foto.src = "assets/Please.jpg"
+        audio.src = "audios/Tears.mp3"
+        audio.play()
         txt.innerHTML = "Tocando agora: Tears!"
         setInterval(function (){
             var soma = 1
@@ -71,9 +78,10 @@ function Button4(){
     if (pontos < 1000){
         alert('[ERRO] você não tem pontos o suficientes')
     } else {
-        foto.src = "assets\sabrina.jpeg"
         pontos = pontos - 1000
-        foto.src = "Juno.jpg"
+        foto.src = "assets/Juno.jpg"
+        audio.src = "audios/Juno.mp3"
+        audio.play()
         p.innerHTML = `${pontos} pontos!!`
         txt.innerHTML = "Tocando agora: Juno!"
         setInterval(function (){
@@ -90,7 +98,9 @@ function Button5(){
     } else {
         pontos = pontos - 10000
         p.innerHTML = `${pontos} pontos!!`
-        foto.src = "Tears.jpg"
+        foto.src = "assets/Tears.jpg"
+        audio.src = "audios/Please.mp3"
+        audio.play()
         txt.innerHTML = "Tocando agora: Please!"
         setInterval(function (){
             var soma = 100
